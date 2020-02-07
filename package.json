@@ -1,0 +1,32 @@
+{
+  "name": "programming-challenges-202001",
+  "version": "1.0.0",
+  "description": "These programming challenges are used as a portion of the interview process.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "jquery": "^3.4.1",
+    "jquery-ui-dist": "^1.12.1"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0"
+  },
+  "scripts": {
+    "test": "mocha \"test/**/*.spec.js\"",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mydoma/programming-challenges-202001.git"
+  },
+  "author": "Colleen Davis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mydoma/programming-challenges-202001/issues"
+  },
+  "homepage": "https://github.com/mydoma/programming-challenges-202001#readme"
+}

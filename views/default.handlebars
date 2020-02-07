@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+
+    <link rel="stylesheet" type="text/css" href="/static/jquery-ui-dist/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="/css/principle.css">
+
+    <script src="/static/jquery/dist/jquery.js"></script>
+    <script src="/static/jquery-ui-dist/jquery-ui.js"></script>
+    <script>
+        function niceString(array) {
+            let str = array.join(', ')
+            return str
+        }
+        $(document).ready(function () {
+            $('#generate').click(function (e) {
+                e.preventDefault()
+                $.get("/sorting",
+                    function(json){
+                        $('#result2').html(niceString(json.sorting))
+                })
+             })
+
+            $('#check').click(function (e) {
+                e.preventDefault()
+                if ($('#gram1').val() == "" || $('#gram2').val() == "") alert("You need to put some text in both boxes!")
+                else {
+                    $.get(
+                        '/anagram/' + $ ('#gram1').val() + '/' + $('#gram2').val(),
+                        function (json) {
+                            var state = json.anagram ? 'are' : 'are not'
+                            var response = $('#gram1').val() + ' and ' + $('#gram2').val() + ' <strong>' + state + '</strong> anagrams.'
+                            $('#result1').html(response)
+                    })
+                }
+            })
+        })
+
+</script>
+</head>
+<body>
+<div id="content">
+<h2>Demonstration page</h2>
+<form method="post" action="/search/advanced" id="createForm">
+    <fieldset>
+        <legend>Largest palindome</legend>
+        <p>The largest palindromic number that is the product of two three-digit numbers is: <b>{{ palindrome }}</b></p>
+    </fieldset>
+    <fieldset>
+        <legend>Anagrams</legend>
+        <p>I can verify anagrams! Fill in each box, and find out whether the two values are anagrams.</p>
+        <p> <input type="text" id="gram1" name="gram1" style="width: 248px" maxlength="50">
+            <input type="text" id="gram2" name="gram2" style="width: 248px" maxlength="50">
+            <button class="ui-button ui-widget ui-corner-all" style="float: right" type="button" id="check">Check!</button></p>
+        <p id="result1"></p>
+    </fieldset>
+    <fieldset>
+        <legend>Sorting</legend>
+        <p>I generate a list of 100 random numbers and sort them.<button class="ui-button ui-widget ui-corner-all" style="float: right" type="button" id="generate">Generate!</button></p>
+        <p id="result2" style="clear:right; margin-top: 20px"></p>
+    </fieldset>
+
+</form>
+</div>
+</body>
+</html>
