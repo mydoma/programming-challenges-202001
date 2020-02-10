@@ -1,21 +1,20 @@
 # Programming Challenge
 
-These programming challenges are used as a portion of the interview process.
 
-**Note:** This challenge has been forked from the good folks over at Qlik!
+Hi there,
 
-**Note:** There are no trick questions, however there are some ways to go above and beyond the strict requirements of the question that can speak to the creativity of the candidate.
+So, Thomas asked me to accept this challenge and I decided to make it a little bit different, using Xamarin with UWP.
+The result is very simple to test, since it's just one executable file to run in Windows for the 3 challenges.
+And if you have VS 2019 with Xamarin, you can create both apps (iOS and Android) too!
 
-## How to Participate
+# To run the app, go to:
+Release - \Sorting\Sorting\bin\x86\Release\Sorting.exe
+Debug -   \Sorting\Sorting\bin\x86\Debug\Sorting.exe
 
-Fork this repository and read the instruction text files in each challenge folder. Complete the challenges, commit and push back to your repository, then open a pull request against this project. We will close the pull request, but it notifies our dev team that someone has taken up the challenge!
-
-## Rules
-
-1. Submissions can be submitted in any language
-2. Modify this readme to include a section
-on how we can run your code.  This can either be an executable, docker image, a list of instructions, etc... We just need a way to be able to run your code on our computers!
-3. 3rd-party vendor libaries can be used if needed
+OR run inside Visual Studio 2019, opening the Solution file in: \Sorting\Sorting.sln
 
 
-## Good luck!
+Hope you like it!
+
+Best,
+Luis Souza
