@@ -19,3 +19,13 @@ on how we can run your code.  This can either be an executable, docker image, a 
 
 
 ## Good luck!
+
+
+## Code Execution
+
+The code for all three tasks are written in javascript and hence it can be run individually in terminal by using NodeJS runtime. If NodeJS runtime is installed then it can be run by going to the file location in the terminal and type "node FileName.js". Incase of no NodeJS runtime, then it can be downloaded at "https://nodejs.org/en/download/".
+
+For the third task, determining anagram, user input is required and hence "prompt-sync" module is used. To download "prompt-sync" follow the instructions below:
+1. Go to the folder location where the anagram code is located.
+2. Type "npm install" to install the dependencies.
+4. Run the code by typing "node anagram.js" and it will prompt user to enter two strings.
