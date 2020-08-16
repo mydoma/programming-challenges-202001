@@ -19,3 +19,14 @@ on how we can run your code.  This can either be an executable, docker image, a 
 
 
 ## Good luck!
+
+## Usage
+
+1. Challenge 1 - Sorting
+`cd` into the folder and run `node sort`.
+
+2. Challenge 2 - Palindrome
+`cd` into the folder and run `node palindrome`.
+
+3. Challenge 3 - Anagram
+Open the `anagram.html` file in the browser.
