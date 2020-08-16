@@ -1,0 +1,31 @@
+<!doctype html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Christian Allard | Anagram</title>
+        <link rel="stylesheet" href="anagram.css">
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <h1>Anagramify</h1>
+        <form>
+            <div class="inputContainer">
+                <label for="word1">Word or phrase #1</label>
+                <input type="text" name="word1" id="word1" placeholder="Bad Credit" required>
+            </div>
+            <div class="inputContainer">
+                <label for="word2">Word or phrase #2</label>
+                <input type="text" name="word2" id="word2" placeholder="Debit Card" required>
+            </div>
+            <div>
+                <input type="submit" value="Check" id="submitBtn" disabled>
+            </div>
+        </form>
+        <div>
+            <p id="result"></p>
+        </div>
+        <script src="anagram.js"></script>
+    </body>
+</html>
